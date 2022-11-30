@@ -1166,7 +1166,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "360",
+        "repeat": "300",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -1174,7 +1174,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 60,
+        "y": 40,
         "wires": [
             [
                 "e9fe86aea3307b3a"
@@ -1257,8 +1257,8 @@
         "id": "47b58c125f5a4341",
         "type": "debug",
         "z": "a5de8b9dc6a6320d",
-        "name": "debug 6",
-        "active": false,
+        "name": "debug 7",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
