@@ -1,0 +1,3076 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5d891f10a3672d83",
+        "type": "tab",
+        "label": "Haus",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a5de8b9dc6a6320d",
+        "type": "tab",
+        "label": "Heizraum",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "df8ddb1dcbce9cdb",
+        "type": "tab",
+        "label": "Wohnzimmer",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cfa1f1e240c78b9d",
+        "type": "tab",
+        "label": "Schopp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1a5a7c8d7c780ab8",
+        "type": "tab",
+        "label": "Analyse",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ddf0de661b41bb77",
+        "type": "ccu-connection",
+        "name": "homematic-raspi",
+        "host": "192.168.178.174",
+        "regaEnabled": false,
+        "bcrfEnabled": false,
+        "iprfEnabled": true,
+        "virtEnabled": false,
+        "bcwiEnabled": false,
+        "cuxdEnabled": false,
+        "regaPoll": true,
+        "regaInterval": "30",
+        "rpcPingTimeout": "60",
+        "rpcInitAddress": "192.168.178.172",
+        "rpcServerHost": "172.17.0.4",
+        "rpcBinPort": "2067",
+        "rpcXmlPort": "2068",
+        "tls": false,
+        "inSecure": false,
+        "authentication": false,
+        "username": "Admin",
+        "password": "Marine",
+        "queueTimeout": "5000",
+        "queuePause": "250",
+        "contextStore": ""
+    },
+    {
+        "id": "d8083157bf94e33b",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://Heizraum:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "75f3e1dc60d78d61",
+        "type": "ui_group",
+        "name": "Haus",
+        "tab": "ea6bc5394adb0556",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ea6bc5394adb0556",
+        "type": "ui_tab",
+        "name": "Haus",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1d6b12e32ea92b7e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4b7930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 1,
+                "cy": 1,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4b2b4055f545c8f5",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB2",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://192.168.178.172:8086",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "1c4b94e23ba66ad7",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://Wasserwerk:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "3cc587457b66eec6",
+        "type": "ui_group",
+        "name": "Schopp",
+        "tab": "1959bfab4d581a81",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1959bfab4d581a81",
+        "type": "ui_tab",
+        "name": "Schopp",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1ae81f04e875b9a0",
+        "type": "ui_group",
+        "name": "Heizung",
+        "tab": "ea6bc5394adb0556",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b0f83c3288271707",
+        "type": "inject",
+        "z": "5d891f10a3672d83",
+        "name": "Haus.Nordwand.Aussen.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.IN_rNordwand_Aussen_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 60,
+        "wires": [
+            [
+                "0a0dfd52a4b6abe3"
+            ]
+        ]
+    },
+    {
+        "id": "2c5ca06e7b28ad24",
+        "type": "OpcUa-Client",
+        "z": "5d891f10a3672d83",
+        "endpoint": "d8083157bf94e33b",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "b2e658724ab65a60"
+            ]
+        ]
+    },
+    {
+        "id": "b2e658724ab65a60",
+        "type": "debug",
+        "z": "5d891f10a3672d83",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8f5ba4c2f9e3b0e0",
+        "type": "ui_text",
+        "z": "5d891f10a3672d83",
+        "group": "75f3e1dc60d78d61",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Haus.Nordwand.Aussen.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fb0858b952ab203e",
+        "type": "function",
+        "z": "5d891f10a3672d83",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 60,
+        "wires": [
+            [
+                "8f5ba4c2f9e3b0e0"
+            ]
+        ]
+    },
+    {
+        "id": "0a0dfd52a4b6abe3",
+        "type": "ccu-get-value",
+        "z": "5d891f10a3672d83",
+        "name": "Haus.Nordwand.Aussen.Temperatur",
+        "ccuConfig": "ddf0de661b41bb77",
+        "iface": "HmIP-RF",
+        "channel": "000EDD89B3A69F:1",
+        "sysvar": "",
+        "sysvarProperty": "value",
+        "datapoint": "ACTUAL_TEMPERATURE",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "fb0858b952ab203e",
+                "2c5ca06e7b28ad24",
+                "ebe50b6721b87395"
+            ]
+        ]
+    },
+    {
+        "id": "ebe50b6721b87395",
+        "type": "influxdb out",
+        "z": "5d891f10a3672d83",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Log in influxDB",
+        "measurement": "Haus.Nordwand.Aussen.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 820,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "24969595932dee56",
+        "type": "inject",
+        "z": "5d891f10a3672d83",
+        "name": "Heizraum.Aussen.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizraum_Aussen_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "ccc1e0cdf6a7a0fe"
+            ]
+        ]
+    },
+    {
+        "id": "ccc1e0cdf6a7a0fe",
+        "type": "OpcUa-Client",
+        "z": "5d891f10a3672d83",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "f7745511470617ae",
+                "4b21af0ed149a7df"
+            ]
+        ]
+    },
+    {
+        "id": "8e6d824571f2bad6",
+        "type": "inject",
+        "z": "5d891f10a3672d83",
+        "name": "Heizraum.Innen.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizraum_Innen_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "60161b4fc18903b7"
+            ]
+        ]
+    },
+    {
+        "id": "60161b4fc18903b7",
+        "type": "OpcUa-Client",
+        "z": "5d891f10a3672d83",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "ce3758c68a9bfda1",
+                "ff98cebe6cc0eaa9"
+            ]
+        ]
+    },
+    {
+        "id": "f7745511470617ae",
+        "type": "function",
+        "z": "5d891f10a3672d83",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 220,
+        "wires": [
+            [
+                "018b85fe039dcf09"
+            ]
+        ]
+    },
+    {
+        "id": "ce3758c68a9bfda1",
+        "type": "function",
+        "z": "5d891f10a3672d83",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 300,
+        "wires": [
+            [
+                "79116347cb618cbc"
+            ]
+        ]
+    },
+    {
+        "id": "018b85fe039dcf09",
+        "type": "ui_text",
+        "z": "5d891f10a3672d83",
+        "group": "75f3e1dc60d78d61",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizraum.Aussen.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "79116347cb618cbc",
+        "type": "ui_text",
+        "z": "5d891f10a3672d83",
+        "group": "75f3e1dc60d78d61",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizraum.Innen.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 980,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4b21af0ed149a7df",
+        "type": "influxdb out",
+        "z": "5d891f10a3672d83",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizraum.Aussen.Temperatur -> DB",
+        "measurement": "Heizraum.Aussen.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 890,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ff98cebe6cc0eaa9",
+        "type": "influxdb out",
+        "z": "5d891f10a3672d83",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizraum.Innen.Temperatur -> DB",
+        "measurement": "Heizraum.Innen.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 880,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fc9c68dadd3addd4",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Vorlauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizung_Vorlauf_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "0399f1a5faa8720f"
+            ]
+        ]
+    },
+    {
+        "id": "0399f1a5faa8720f",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "9025acdf179ea5d2",
+                "596d938990604e55"
+            ]
+        ]
+    },
+    {
+        "id": "7059f05a4a03f7f2",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Ruecklauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizung_Ruecklauf_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 340,
+        "wires": [
+            [
+                "85992b4df548d757"
+            ]
+        ]
+    },
+    {
+        "id": "85992b4df548d757",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "be4a7e32388be8e9",
+                "5e39fd55e7f55d35"
+            ]
+        ]
+    },
+    {
+        "id": "1bf31ad7db360328",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Warmwasser.Ruecklauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rWarmwasser_Ruecklauf_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 940,
+        "wires": [
+            [
+                "e74cb5c6cba71fd4"
+            ]
+        ]
+    },
+    {
+        "id": "e74cb5c6cba71fd4",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 940,
+        "wires": [
+            [
+                "b478646ab0c57c75",
+                "54c8184124764585"
+            ]
+        ]
+    },
+    {
+        "id": "2d1e481153c9a13b",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Warmwasser.Vorlauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rWarmwasser_Vorlauf_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 860,
+        "wires": [
+            [
+                "64fd9afee108fd96"
+            ]
+        ]
+    },
+    {
+        "id": "64fd9afee108fd96",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 860,
+        "wires": [
+            [
+                "bb0eb337090f9f11",
+                "3e49b11b4bf03d2a"
+            ]
+        ]
+    },
+    {
+        "id": "a5bcbb23e4532568",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Fussboden.Ruecklauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizung_Fussboden_Ruecklauf_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 600,
+        "wires": [
+            [
+                "32651bc87fba9478"
+            ]
+        ]
+    },
+    {
+        "id": "32651bc87fba9478",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "0dc4739f8133fa1e",
+                "7e3ee4b9e12c433b"
+            ]
+        ]
+    },
+    {
+        "id": "770100bfe093c385",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Vorlauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9025acdf179ea5d2",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "770100bfe093c385"
+            ]
+        ]
+    },
+    {
+        "id": "be4a7e32388be8e9",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "0fe487adcba102dc"
+            ]
+        ]
+    },
+    {
+        "id": "bb0eb337090f9f11",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 860,
+        "wires": [
+            [
+                "33c85d5ef6c4dd4f"
+            ]
+        ]
+    },
+    {
+        "id": "b478646ab0c57c75",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 940,
+        "wires": [
+            [
+                "21df3cffc57c2c58"
+            ]
+        ]
+    },
+    {
+        "id": "0dc4739f8133fa1e",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 600,
+        "wires": [
+            [
+                "ec5c7cb2b55f1d46"
+            ]
+        ]
+    },
+    {
+        "id": "0fe487adcba102dc",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Ruecklauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 890,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "33c85d5ef6c4dd4f",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Warmwasser.Vorlauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 890,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "21df3cffc57c2c58",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Warmwasser.Ruecklauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 900,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "ec5c7cb2b55f1d46",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Fussboden.Ruecklauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 930,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a44c13b5ea17f757",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 40,
+        "wires": [
+            [
+                "47b58c125f5a4341"
+            ]
+        ]
+    },
+    {
+        "id": "e9fe86aea3307b3a",
+        "type": "ui_switch",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Ein",
+        "label": "Heizung.EIN",
+        "tooltip": "",
+        "group": "1ae81f04e875b9a0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 330,
+        "y": 40,
+        "wires": [
+            [
+                "a44c13b5ea17f757",
+                "81b249a87b4a7e2c"
+            ]
+        ]
+    },
+    {
+        "id": "f806ca4e4ed31ff4",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.EIN",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.IN_bHeizung_EIN;datatype=Boolean",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "e9fe86aea3307b3a"
+            ]
+        ]
+    },
+    {
+        "id": "3ae2d436eac95014",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Fussboden.Kugelhahn.Stellgrad",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_uiHeizung_Fussboden_Stellgrad_act;datatype=UInt16",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 680,
+        "wires": [
+            [
+                "2d5f012356cb622d"
+            ]
+        ]
+    },
+    {
+        "id": "2d5f012356cb622d",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 680,
+        "wires": [
+            [
+                "a194d35d89606234",
+                "be44429d5432900b"
+            ]
+        ]
+    },
+    {
+        "id": "a194d35d89606234",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Fussboden.Kugelhahn.Stellgrad",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 800,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "47b58c125f5a4341",
+        "type": "debug",
+        "z": "a5de8b9dc6a6320d",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "472bdf7c49f44134",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Hauptschalter.Anforderung -> DB",
+        "measurement": "Heizung.Hauptschalter.Anforderung ",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 800,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "596d938990604e55",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Vorlauf.Temperatur -> DB",
+        "measurement": "Heizung.Vorlauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5e39fd55e7f55d35",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Ruecklauf.Temperatur -> DB",
+        "measurement": "Heizung.Ruecklauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3e49b11b4bf03d2a",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Warmwasser.Vorlauf.Temperatur -> DB",
+        "measurement": "Warmwasser.Vorlauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 790,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "54c8184124764585",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Warmwasser.Ruecklauf.Temperatur -> DB",
+        "measurement": "Warmwasser.Ruecklauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 800,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "7e3ee4b9e12c433b",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Fussboden.Ruecklauf.Temperatur -> DB",
+        "measurement": "Heizung.Fussboden.Ruecklauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 830,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "dfb4a3a3cbf8a744",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Fussboden.Vorlauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizung_Fussboden_Vorlauf_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [
+                "a98d12905b6c8190"
+            ]
+        ]
+    },
+    {
+        "id": "a98d12905b6c8190",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 520,
+        "wires": [
+            [
+                "e87c331a72cd5361",
+                "da5191f35379a076"
+            ]
+        ]
+    },
+    {
+        "id": "e87c331a72cd5361",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 520,
+        "wires": [
+            [
+                "fa2f3f0ad48ac88f"
+            ]
+        ]
+    },
+    {
+        "id": "fa2f3f0ad48ac88f",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Fussboden.Vorlauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 920,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "da5191f35379a076",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Fussboden.Vorlauf.Temperatur -> DB",
+        "measurement": "Heizung.Fussboden.Vorlauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 820,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "be44429d5432900b",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Fussboden.Kugelhahn.Stellgrad -> DB",
+        "measurement": "Heizung.Fussboden.Kugelhahn.Stellgrad",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 820,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a1620ce706a3fd43",
+        "type": "debug",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Hauptschalter.Anforderung ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "81b249a87b4a7e2c",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "BoolToEnum",
+        "func": "msg.original = msg.payload;\nif (msg.payload === \"true\" || msg.payload === true) {\n    msg.payload = 2;\n} else {\n    msg.payload = 1;\n}\nreturn msg;\n\n// 0 = unbekannt;\n// 1 = Anforderung AUS;\n// 2 = Anforderung EIN;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "472bdf7c49f44134",
+                "a1620ce706a3fd43"
+            ]
+        ]
+    },
+    {
+        "id": "ac6f46d1c02de0fb",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Heizkessel.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rHeizung_Heizkessel_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "25395410bbca487a"
+            ]
+        ]
+    },
+    {
+        "id": "25395410bbca487a",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "0c02043294fc7891",
+                "745d5d6af420163a"
+            ]
+        ]
+    },
+    {
+        "id": "9a8852057654fe3b",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Heizkessel.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 890,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0c02043294fc7891",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 180,
+        "wires": [
+            [
+                "9a8852057654fe3b"
+            ]
+        ]
+    },
+    {
+        "id": "745d5d6af420163a",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Heizkessel.Temperatur -> DB",
+        "measurement": "Heizung.Heizkessel.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "84517ee8b901d5b1",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Warmwasser.Speicher.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_rWarmwasser_Speicher_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 780,
+        "wires": [
+            [
+                "723f265aad43444b"
+            ]
+        ]
+    },
+    {
+        "id": "723f265aad43444b",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 780,
+        "wires": [
+            [
+                "6c6dcee8ab5368ab",
+                "6e50c3cb5899a26a"
+            ]
+        ]
+    },
+    {
+        "id": "6c6dcee8ab5368ab",
+        "type": "function",
+        "z": "a5de8b9dc6a6320d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 780,
+        "wires": [
+            [
+                "e7806068ac3b27c3"
+            ]
+        ]
+    },
+    {
+        "id": "e7806068ac3b27c3",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Warmwasser.Speicher.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 900,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "6e50c3cb5899a26a",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Warmwasser.Speicher.Temperatur -> DB",
+        "measurement": "Warmwasser.Speicher.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 800,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "f593cd77457cfa1c",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Heizung.Pumpe.Status",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_uiHeizung_Pumpe_Status;datatype=UInt16",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "c4a17707f4a88cfd"
+            ]
+        ]
+    },
+    {
+        "id": "c4a17707f4a88cfd",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 420,
+        "wires": [
+            [
+                "371cafdc1d400296",
+                "ae881c1c0c07d3e6"
+            ]
+        ]
+    },
+    {
+        "id": "371cafdc1d400296",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Heizung.Pumpe.Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ae881c1c0c07d3e6",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Heizung.Pumpe.Status -> DB",
+        "measurement": "Heizung.Pumpe.Status",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 760,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f7725766e7587f95",
+        "type": "inject",
+        "z": "a5de8b9dc6a6320d",
+        "name": "Warmwasser.Pumpe.Status",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.OUT_uiWarmwasser_Pumpe_Status;datatype=UInt16",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 1020,
+        "wires": [
+            [
+                "4b887ec5bb849d70"
+            ]
+        ]
+    },
+    {
+        "id": "4b887ec5bb849d70",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 520,
+        "y": 1020,
+        "wires": [
+            [
+                "0b0710b2965ad00a",
+                "409484bae334ce1c"
+            ]
+        ]
+    },
+    {
+        "id": "0b0710b2965ad00a",
+        "type": "ui_text",
+        "z": "a5de8b9dc6a6320d",
+        "group": "1ae81f04e875b9a0",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Warmwasser.Pumpe.Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 760,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "409484bae334ce1c",
+        "type": "influxdb out",
+        "z": "a5de8b9dc6a6320d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Warmwasser.Pumpe.Status -> DB",
+        "measurement": "Warmwasser.Pumpe.Status",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 780,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "7b124c32e2ead480",
+        "type": "inject",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "Wohnzimmer.Temperatur.IST",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.IN_rWohnzimmer_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "dfad2db79f0d7b65"
+            ]
+        ]
+    },
+    {
+        "id": "dfad2db79f0d7b65",
+        "type": "ccu-get-value",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "Wohnzimmer.Temperatur.Ist",
+        "ccuConfig": "ddf0de661b41bb77",
+        "iface": "HmIP-RF",
+        "channel": "000A9F298A1195:1",
+        "sysvar": "",
+        "sysvarProperty": "value",
+        "datapoint": "ACTUAL_TEMPERATURE",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 500,
+        "y": 40,
+        "wires": [
+            [
+                "13efd1e1a6310254",
+                "4ef009e7c6911a30",
+                "9ab783c4ded5e891"
+            ]
+        ]
+    },
+    {
+        "id": "13efd1e1a6310254",
+        "type": "function",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 40,
+        "wires": [
+            [
+                "7be4bc6c172f1128"
+            ]
+        ]
+    },
+    {
+        "id": "7be4bc6c172f1128",
+        "type": "ui_text",
+        "z": "df8ddb1dcbce9cdb",
+        "group": "75f3e1dc60d78d61",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Wohnzimmer.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 910,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "717730438a2aa874",
+        "type": "ccu-get-value",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "Wohnzimmer.Temperatur.Soll",
+        "ccuConfig": "ddf0de661b41bb77",
+        "iface": "HmIP-RF",
+        "channel": "000A9F298A1195:1",
+        "sysvar": "",
+        "sysvarProperty": "value",
+        "datapoint": "SET_POINT_TEMPERATURE",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "62ca328ad0a54282",
+                "f9a233e436a29c07",
+                "0be56378b32be3ed"
+            ]
+        ]
+    },
+    {
+        "id": "62ca328ad0a54282",
+        "type": "function",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 180,
+        "wires": [
+            [
+                "4c398321b42a077a"
+            ]
+        ]
+    },
+    {
+        "id": "4c398321b42a077a",
+        "type": "ui_text",
+        "z": "df8ddb1dcbce9cdb",
+        "group": "75f3e1dc60d78d61",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Wohnzimmer.Temperatur.Soll",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 920,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3050de4da1f4c6de",
+        "type": "ccu-get-value",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "Wohnzimmer.Kamin.Temperatur",
+        "ccuConfig": "ddf0de661b41bb77",
+        "iface": "HmIP-RF",
+        "channel": "000A1D89B090BA:1",
+        "sysvar": "",
+        "sysvarProperty": "value",
+        "datapoint": "ACTUAL_TEMPERATURE",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "52aaf207462679df",
+                "d249e57ffe5667b6",
+                "71a4a7d0d05ca33c"
+            ]
+        ]
+    },
+    {
+        "id": "52aaf207462679df",
+        "type": "function",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "eac24e932eb8431d"
+            ]
+        ]
+    },
+    {
+        "id": "eac24e932eb8431d",
+        "type": "ui_text",
+        "z": "df8ddb1dcbce9cdb",
+        "group": "75f3e1dc60d78d61",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Wohnzimmer.Kamin.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 930,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1191c839a598722d",
+        "type": "inject",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "Wohnzimmer.Temperatur.Soll",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.IN_rWohnzimmer_Temperatur_soll;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "717730438a2aa874"
+            ]
+        ]
+    },
+    {
+        "id": "3aa24dd011f54965",
+        "type": "inject",
+        "z": "df8ddb1dcbce9cdb",
+        "name": "Wohnzimmer.Kamin.Temperatur.Ist",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.IN_rKaminHeizung_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 340,
+        "wires": [
+            [
+                "3050de4da1f4c6de"
+            ]
+        ]
+    },
+    {
+        "id": "f9a233e436a29c07",
+        "type": "OpcUa-Client",
+        "z": "df8ddb1dcbce9cdb",
+        "endpoint": "d8083157bf94e33b",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 760,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d249e57ffe5667b6",
+        "type": "OpcUa-Client",
+        "z": "df8ddb1dcbce9cdb",
+        "endpoint": "d8083157bf94e33b",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 760,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ef009e7c6911a30",
+        "type": "OpcUa-Client",
+        "z": "df8ddb1dcbce9cdb",
+        "endpoint": "d8083157bf94e33b",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 760,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ab783c4ded5e891",
+        "type": "influxdb out",
+        "z": "df8ddb1dcbce9cdb",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Wohnzimmer.Temperatur -> DB",
+        "measurement": "Wohnzimmer.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 810,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "0be56378b32be3ed",
+        "type": "influxdb out",
+        "z": "df8ddb1dcbce9cdb",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Wohnzimmer.Temperatur.Soll -> DB",
+        "measurement": "Wohnzimmer.Temperatur.Soll",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "71a4a7d0d05ca33c",
+        "type": "influxdb out",
+        "z": "df8ddb1dcbce9cdb",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Wohnzimmer.Kamin.Temperatur -> DB",
+        "measurement": "Wohnzimmer.Kamin.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 830,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "16931b2baae51fb4",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Schopp.Aussen.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.Application.GVL_OPCUA.Schopp_Aussen_rTemperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "3c34ce5056fcc81b"
+            ]
+        ]
+    },
+    {
+        "id": "3c34ce5056fcc81b",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 480,
+        "y": 40,
+        "wires": [
+            [
+                "557cc82727b08d4b",
+                "1dcb8a142cbd06ae"
+            ]
+        ]
+    },
+    {
+        "id": "ed3902a135107998",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Pool.Ablauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.Application.GVL_OPCUA.Pool_Ablauf_rTemperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "825b60d2b98927d2"
+            ]
+        ]
+    },
+    {
+        "id": "825b60d2b98927d2",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "b7998b855f46be66",
+                "afb53309984cf783"
+            ]
+        ]
+    },
+    {
+        "id": "f4f0903ab64b7e5f",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Pool.Zulauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.Application.GVL_OPCUA.Pool_Zulauf_rTemperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "dbf1777ad6dd1260"
+            ]
+        ]
+    },
+    {
+        "id": "dbf1777ad6dd1260",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "c3c39c889815d47b",
+                "76637dec363efafc"
+            ]
+        ]
+    },
+    {
+        "id": "a43464d944710997",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Pool.Solar.Ablauf.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.Application.GVL_OPCUA.Pool_Solar_Ablauf_rTemperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 420,
+        "wires": [
+            [
+                "a8dcb64413b46b12"
+            ]
+        ]
+    },
+    {
+        "id": "a8dcb64413b46b12",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "26fb551111223256",
+                "ff0ed43aa8031101"
+            ]
+        ]
+    },
+    {
+        "id": "71d8d71ba35244e0",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Pool.DurchflussMinute",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.Application.GVL_OPCUA.Pool_rDurchflussMinute;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "f90d0a0619af97dd"
+            ]
+        ]
+    },
+    {
+        "id": "f90d0a0619af97dd",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 480,
+        "y": 520,
+        "wires": [
+            [
+                "9983e2daa1cfadd6",
+                "3555e67051fdc4a5"
+            ]
+        ]
+    },
+    {
+        "id": "9b5fc0fafaad336b",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Hauswasserwerk.Wasserdruck",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.Application.GVL_OPCUA.Hauswasserwerk_rWasserdruck_0_5bar;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "4646d008069231bd"
+            ]
+        ]
+    },
+    {
+        "id": "4646d008069231bd",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [
+                "c95314f69092d39b",
+                "83912b54760c167b"
+            ]
+        ]
+    },
+    {
+        "id": "557cc82727b08d4b",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nflow.set('SchoppAussenTemperatur',msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 40,
+        "wires": [
+            [
+                "682b327edd4cd028",
+                "d5b377fa91f0e2c7"
+            ]
+        ]
+    },
+    {
+        "id": "682b327edd4cd028",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "3cc587457b66eec6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Schopp.Aussen.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1140,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b7998b855f46be66",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "013443b84f739548"
+            ]
+        ]
+    },
+    {
+        "id": "c3c39c889815d47b",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "e7fcc2991f5e1902"
+            ]
+        ]
+    },
+    {
+        "id": "26fb551111223256",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "964e60b01b06c299"
+            ]
+        ]
+    },
+    {
+        "id": "9983e2daa1cfadd6",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 520,
+        "wires": [
+            [
+                "55ae064eb611b6de"
+            ]
+        ]
+    },
+    {
+        "id": "c95314f69092d39b",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "RND",
+        "func": "msg.payload = msg.payload.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 620,
+        "wires": [
+            [
+                "74b56b63c40be885"
+            ]
+        ]
+    },
+    {
+        "id": "013443b84f739548",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "3cc587457b66eec6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pool.Ablauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e7fcc2991f5e1902",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "3cc587457b66eec6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pool.Zulauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 850,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "964e60b01b06c299",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "3cc587457b66eec6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pool.Solar.Ablauf.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 860,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "55ae064eb611b6de",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "3cc587457b66eec6",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pool.DurchflussMinute",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 840,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "74b56b63c40be885",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "3cc587457b66eec6",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hauswasserwerk.Wasserdruck",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 870,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d5b377fa91f0e2c7",
+        "type": "ui_text",
+        "z": "cfa1f1e240c78b9d",
+        "group": "75f3e1dc60d78d61",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Schopp.Aussen.Temperatur",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 860,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b903c5be5e366c92",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 820,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89c1388c1cec40ed",
+        "type": "inject",
+        "z": "cfa1f1e240c78b9d",
+        "name": "Schopp.Aussen.Temperatur",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "360",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "ns=4;s=|var|CODESYS Control for Raspberry Pi SL.APP.GVL_OPCUA.IN_rSchopp_Aussen_Temperatur;datatype=Float",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "7146bcabe3010292"
+            ]
+        ]
+    },
+    {
+        "id": "7146bcabe3010292",
+        "type": "function",
+        "z": "cfa1f1e240c78b9d",
+        "name": "LadeTemperatur",
+        "func": "var Temperatur = flow.get('SchoppAussenTemperatur') || 2.0\nmsg.payload = Temperatur\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "b903c5be5e366c92"
+            ]
+        ]
+    },
+    {
+        "id": "1dcb8a142cbd06ae",
+        "type": "influxdb out",
+        "z": "cfa1f1e240c78b9d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Schopp.Aussen.Temperatur -> DB",
+        "measurement": "Schopp.Aussen.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 740,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "afb53309984cf783",
+        "type": "influxdb out",
+        "z": "cfa1f1e240c78b9d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Pool.Ablauf.Temperatur -> DB",
+        "measurement": "Pool.Ablauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "76637dec363efafc",
+        "type": "influxdb out",
+        "z": "cfa1f1e240c78b9d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Pool.Zulauf.Temperatur -> DB",
+        "measurement": "Pool.Zulauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ff0ed43aa8031101",
+        "type": "influxdb out",
+        "z": "cfa1f1e240c78b9d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Pool.Solar.Ablauf.Temperatur -> DB",
+        "measurement": "Pool.Solar.Ablauf.Temperatur",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 740,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3555e67051fdc4a5",
+        "type": "influxdb out",
+        "z": "cfa1f1e240c78b9d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Pool.DurchflussMinute -> DB",
+        "measurement": "Pool.DurchflussMinute",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 720,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "83912b54760c167b",
+        "type": "influxdb out",
+        "z": "cfa1f1e240c78b9d",
+        "influxdb": "4b2b4055f545c8f5",
+        "name": "Hauswasserwerk.Wasserdruck -> DB",
+        "measurement": "Hauswasserwerk.Wasserdruck",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "Hausknecht",
+        "bucket": "Energiemessung",
+        "x": 750,
+        "y": 660,
+        "wires": []
+    }
+]
