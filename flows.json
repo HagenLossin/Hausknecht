@@ -940,7 +940,7 @@
         "type": "debug",
         "z": "a5de8b9dc6a6320d",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2326,28 +2326,9 @@
             [
                 "52aaf207462679df",
                 "d249e57ffe5667b6",
-                "71a4a7d0d05ca33c",
-                "f65773a414842f94"
+                "71a4a7d0d05ca33c"
             ]
         ]
-    },
-    {
-        "id": "f65773a414842f94",
-        "type": "influxdb out",
-        "z": "df8ddb1dcbce9cdb",
-        "influxdb": "4b2b4055f545c8f5",
-        "name": "Wohnzimmer.Kamin.Temperatur > DB2",
-        "measurement": "Wohnzimmer.Kamin.Temperatur",
-        "precision": "",
-        "retentionPolicy": "",
-        "database": "database",
-        "precisionV18FluxV20": "s",
-        "retentionPolicyV18Flux": "",
-        "org": "Hausknecht",
-        "bucket": "Energiemessung",
-        "x": 850,
-        "y": 500,
-        "wires": []
     },
     {
         "id": "16931b2baae51fb4",
