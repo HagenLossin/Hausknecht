@@ -1201,7 +1201,7 @@
         "type": "ui_text",
         "z": "a5de8b9dc6a6320d",
         "group": "1ae81f04e875b9a0",
-        "order": 13,
+        "order": 14,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1218,7 +1218,7 @@
         "type": "ui_text",
         "z": "a5de8b9dc6a6320d",
         "group": "1ae81f04e875b9a0",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1303,7 +1303,7 @@
         "type": "ui_text",
         "z": "a5de8b9dc6a6320d",
         "group": "1ae81f04e875b9a0",
-        "order": 12,
+        "order": 13,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1313,40 +1313,6 @@
         "className": "",
         "x": 900,
         "y": 780,
-        "wires": []
-    },
-    {
-        "id": "371cafdc1d400296",
-        "type": "ui_text",
-        "z": "a5de8b9dc6a6320d",
-        "group": "1ae81f04e875b9a0",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Heizung.Pumpe.Status",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 740,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "0b0710b2965ad00a",
-        "type": "ui_text",
-        "z": "a5de8b9dc6a6320d",
-        "group": "1ae81f04e875b9a0",
-        "order": 11,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Warmwasser.Pumpe.Status",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 760,
-        "y": 1020,
         "wires": []
     },
     {
@@ -1631,8 +1597,8 @@
         "y": 420,
         "wires": [
             [
-                "371cafdc1d400296",
-                "ae881c1c0c07d3e6"
+                "ae881c1c0c07d3e6",
+                "6b91884a2669c707"
             ]
         ]
     },
@@ -1657,8 +1623,8 @@
         "y": 1020,
         "wires": [
             [
-                "0b0710b2965ad00a",
-                "409484bae334ce1c"
+                "409484bae334ce1c",
+                "dfb1c132ba12a394"
             ]
         ]
     },
@@ -1919,8 +1885,8 @@
         "name": "",
         "group": "1ae81f04e875b9a0",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "passthru": false,
         "label": "Heizung.EIN",
         "tooltip": "",
@@ -2097,6 +2063,74 @@
             [
                 "a44c13b5ea17f757"
             ]
+        ]
+    },
+    {
+        "id": "6b91884a2669c707",
+        "type": "ui_led",
+        "z": "a5de8b9dc6a6320d",
+        "order": 11,
+        "group": "1ae81f04e875b9a0",
+        "width": 0,
+        "height": 0,
+        "label": "Heizung.Pumpe.Aktiv",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#c7c7c7",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#02f702",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "Heizung.Pumpe.Aktiv",
+        "x": 740,
+        "y": 420,
+        "wires": [],
+        "inputLabels": [
+            "Heizung Aktiv"
+        ]
+    },
+    {
+        "id": "dfb1c132ba12a394",
+        "type": "ui_led",
+        "z": "a5de8b9dc6a6320d",
+        "order": 11,
+        "group": "1ae81f04e875b9a0",
+        "width": 0,
+        "height": 0,
+        "label": "Warmwasser.Pumpe.Aktiv",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#c7c7c7",
+                "value": "0",
+                "valueType": "num"
+            },
+            {
+                "color": "#02f702",
+                "value": "1",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "Warmwasser.Pumpe.Aktiv",
+        "x": 750,
+        "y": 1020,
+        "wires": [],
+        "inputLabels": [
+            "Heizung Aktiv"
         ]
     },
     {
