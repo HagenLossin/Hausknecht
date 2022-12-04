@@ -2134,6 +2134,112 @@
         ]
     },
     {
+        "id": "792ee0716c2b3577",
+        "type": "catch",
+        "z": "a5de8b9dc6a6320d",
+        "name": "catch Heizraum",
+        "scope": null,
+        "uncaught": false,
+        "x": 120,
+        "y": 1120,
+        "wires": [
+            [
+                "3d7494df77f67a1a"
+            ]
+        ]
+    },
+    {
+        "id": "3d7494df77f67a1a",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "disconnect",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "OPCUA-Disconnect",
+        "x": 360,
+        "y": 1120,
+        "wires": [
+            [
+                "ad56e33d1c6d4f72"
+            ]
+        ]
+    },
+    {
+        "id": "ad56e33d1c6d4f72",
+        "type": "delay",
+        "z": "a5de8b9dc6a6320d",
+        "name": "10s",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 1120,
+        "wires": [
+            [
+                "d0b74f4c45642722"
+            ]
+        ]
+    },
+    {
+        "id": "d0b74f4c45642722",
+        "type": "OpcUa-Client",
+        "z": "a5de8b9dc6a6320d",
+        "endpoint": "d8083157bf94e33b",
+        "action": "connect",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "OPCUA-Connect",
+        "x": 750,
+        "y": 1120,
+        "wires": [
+            [
+                "e4680e11c7b8de28"
+            ]
+        ]
+    },
+    {
+        "id": "e4680e11c7b8de28",
+        "type": "debug",
+        "z": "a5de8b9dc6a6320d",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1120,
+        "wires": []
+    },
+    {
         "id": "7b124c32e2ead480",
         "type": "inject",
         "z": "df8ddb1dcbce9cdb",
@@ -3264,6 +3370,112 @@
         "bucket": "Energiemessung",
         "x": 750,
         "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c1175bb069e1ca2f",
+        "type": "catch",
+        "z": "cfa1f1e240c78b9d",
+        "name": "catch wasserwerk",
+        "scope": null,
+        "uncaught": false,
+        "x": 130,
+        "y": 720,
+        "wires": [
+            [
+                "f6f8153cc674ec0f"
+            ]
+        ]
+    },
+    {
+        "id": "f6f8153cc674ec0f",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "disconnect",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "OPCUA-Disconnect",
+        "x": 360,
+        "y": 720,
+        "wires": [
+            [
+                "2b39b934343b79da"
+            ]
+        ]
+    },
+    {
+        "id": "2b39b934343b79da",
+        "type": "delay",
+        "z": "cfa1f1e240c78b9d",
+        "name": "10s",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 720,
+        "wires": [
+            [
+                "60ab285c48a6fda4"
+            ]
+        ]
+    },
+    {
+        "id": "60ab285c48a6fda4",
+        "type": "OpcUa-Client",
+        "z": "cfa1f1e240c78b9d",
+        "endpoint": "1c4b94e23ba66ad7",
+        "action": "connect",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "OPCUA-Connect",
+        "x": 750,
+        "y": 720,
+        "wires": [
+            [
+                "ca91fd18e5a5448a"
+            ]
+        ]
+    },
+    {
+        "id": "ca91fd18e5a5448a",
+        "type": "debug",
+        "z": "cfa1f1e240c78b9d",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 720,
         "wires": []
     }
 ]
